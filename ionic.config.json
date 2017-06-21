@@ -1,0 +1,12 @@
+{
+  "name": "myApp",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+        "path": "/cities",
+        "proxyUrl": "http://fuelpriceindia.herokuapp.com"
+    }
+]
+}

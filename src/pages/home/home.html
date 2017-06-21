@@ -1,0 +1,19 @@
+<ion-content padding class="BG">
+    <div class="content">
+        <img src="assets/img/gol.png" class="golImg img-circle img-center">
+        <div class="row">
+            <div class="input-group input-group-lg">
+                <select [(ngModel)]="selectedValue" class="form-control">
+                    <option *ngFor="let c of countries" [ngValue]="c">{{c}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row fabGroup" style="width: 248px;">
+            <div class="col-xs-4" *ngFor="let item of hifuel">
+                <ion-fab>
+                    <button ion-fab  (click)="GetPrice($event, item)" [ngClass]="  {'selectedButton': selectedItem == item , 'custom': true}">{{item}}</button>
+                </ion-fab>
+            </div>
+        </div>
+    </div>
+</ion-content>
