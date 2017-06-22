@@ -21,8 +21,28 @@
 .img-center {
     margin: 0 auto;
     display: block;
-    width: 248px;
+    width: 246px;
     margin-top: 90px;
+    background-image: url(../assets/img/1.png);
+    height: 246px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid red; */
+    border-radius: 153px;
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+    padding-top: 91px;
+    border: 1px solid #fff;
+    /* -webkit-filter: blur(5px); */
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    /* filter: blur(5px); */
+    filter: brightness(78%);
+    /* background-color: #009FA5; */
+    /* z-index: 999; */
 }
 
 .input-group-lg {
@@ -53,4 +73,3 @@ select {
     text-indent: 1px;
     text-overflow: '';
 }
-

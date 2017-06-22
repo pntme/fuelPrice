@@ -3,4 +3,15 @@ page-home {
         background-color: #fff !important;
         color: #29828C !important;
     }
+    .showPrice {
+        color: grey;
+        font-size: 45px;
+        position: absolute;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        top: 31%;
+        left: 31%;
+        background-image: url(../assets/img/gol.png);
+    }
 }
