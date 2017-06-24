@@ -1,12 +1,11 @@
 {
   "name": "myApp",
-  "app_id": "",
-  "v2": true,
-  "typescript": true,
+  "app_id": "f61637f1",
   "proxies": [
     {
-        "path": "/cities",
-        "proxyUrl": "http://fuelpriceindia.herokuapp.com"
+      "path": "/cities",
+      "proxyUrl": "http://fuelpriceindia.herokuapp.com"
     }
-]
+  ],
+  "type": "ionic-angular"
 }
