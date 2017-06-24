@@ -2,7 +2,7 @@
 
     <div class="content">.
 
-    <div myHidden [step]="30" [countTo]="10" [countFrom]="0" [duration]="4" (countoChange)="counto = $event" (countoEnd)="onCountoEnd()" class="img-center ">
+    <div myHidden [step]="30" [countTo]="showPrice" [countFrom]="40" [duration]="1" (countoChange)="counto = $event" (countoEnd)="onCountoEnd()" class="img-center ">
 
 {{counto | currency:'INR':true:'1.2-2'}}</div>
         <!-- <img src="assets/img/gol.png" class="golImg img-circle img-center"> -->

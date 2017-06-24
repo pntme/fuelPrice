@@ -22,6 +22,7 @@ export class HomePage {
   public loading;
   public selectedItem;
   public hifuel = ['Petrol', 'Diesel', 'CNG'];
+  public showPrice;
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private http: Http, public _toast: toast, public alertCtrl: AlertController) {
 
@@ -58,31 +59,35 @@ export class HomePage {
   }
 
   GetPrice(event, fuel) {
-    this.presentLoadingCustom()
+    // this.presentLoadingCustom()
     this.CallPrice(this.selectedValue, fuel).subscribe((data) => {
-      this.loading.dismiss();
-      this.showConfirm(data.city, data[fuel], fuel);
+      // this.loading.dismiss();
+      console.log(data)
+      this.showPrice = data[fuel];
+      console.log(this.showPrice)
+
+      // this.showConfirm(data.city, data[fuel], fuel);
     }, (err) => {
       console.log(err)
     });
 
   }
 
-  showConfirm(city, price, Fuel) {
-    let confirm = this.alertCtrl.create({
-      title: 'In ' + city,
-      message: 'The ' + Fuel + ' price is ' + price,
-      buttons: [
-        {
-          text: 'OK',
-          handler: () => {
-            console.log('Agree clicked');
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
+  // showConfirm(city, price, Fuel) {
+  //   let confirm = this.alertCtrl.create({
+  //     title: 'In ' + city,
+  //     message: 'The ' + Fuel + ' price is ' + price,
+  //     buttons: [
+  //       {
+  //         text: 'OK',
+  //         handler: () => {
+  //           console.log('Agree clicked');
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   confirm.present();
+  // }
 
   presentLoadingCustom() {
     this.loading = this.loadingCtrl.create({
