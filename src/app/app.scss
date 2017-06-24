@@ -19,30 +19,32 @@
 }
 
 .img-center {
-    margin: 0 auto;
+     margin: 0 auto;
     display: block;
-    width: 246px;
+    width: 220px;
     margin-top: 90px;
     background-image: url(../assets/img/1.png);
-    height: 246px;
+    height: 220px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     /* border: 1px solid red; */
     border-radius: 153px;
     text-align: center;
-    font-size: 42px;
+    font-size: 48px;
     color: #fff;
-    padding-top: 91px;
-    border: 1px solid #fff;
+    padding-top: 75px;
+    border: 5px solid #fff;
     /* -webkit-filter: blur(5px); */
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     /* filter: blur(5px); */
+    -webkit-filter: brightness(78%);
     filter: brightness(78%);
-    /* background-color: #009FA5; */
+    background-color: #009FA5;
     /* z-index: 999; */
+    margin-bottom: 16px;
 }
 
 .input-group-lg {
