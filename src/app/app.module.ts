@@ -7,14 +7,15 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HiddenDirective } from '../pages/home/counter.directive';
-// import { CountoDirective }  from '../pages/home/counter.directive';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
-// import { GoogleChart } from 'angular2-google-chart/directives/angular2-google-chart.directive';
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'f61637f1'
+  }
+};
 
 enableProdMode();
-
-// import { provide } from '@angular/core';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +25,7 @@ enableProdMode();
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings),
     HttpModule
   ],
   bootstrap: [
