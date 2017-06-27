@@ -23,6 +23,7 @@ export class HomePage {
   public selectedItem;
   public hifuel = ['Petrol', 'Diesel', 'CNG'];
   public showPrice;
+  public showImage;
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private http: Http, public _toast: toast, public alertCtrl: AlertController) {
 
@@ -49,46 +50,28 @@ export class HomePage {
 
 
   ionViewDidLoad() {
+    this.showImage =  true;
     this.GetCities().subscribe((data) => {
       console.log(data.cities)
       this.countries = data.cities;
-      this.selectedValue = this.countries[0];
+      this.selectedValue = this.countries[2];
     }, (err) => {
       console.log(err)
     });
   }
 
   GetPrice(event, fuel) {
-    // this.presentLoadingCustom()
+    // this.showImage =  false;
     this.CallPrice(this.selectedValue, fuel).subscribe((data) => {
-      // this.loading.dismiss();
-      console.log(data)
       this.showPrice = data[fuel];
+      this.showImage =  false;
       console.log(this.showPrice)
-
-      // this.showConfirm(data.city, data[fuel], fuel);
     }, (err) => {
       console.log(err)
     });
-
   }
 
-  // showConfirm(city, price, Fuel) {
-  //   let confirm = this.alertCtrl.create({
-  //     title: 'In ' + city,
-  //     message: 'The ' + Fuel + ' price is ' + price,
-  //     buttons: [
-  //       {
-  //         text: 'OK',
-  //         handler: () => {
-  //           console.log('Agree clicked');
-  //         }
-  //       }
-  //     ]
-  //   });
-  //   confirm.present();
-  // }
-
+ 
   presentLoadingCustom() {
     this.loading = this.loadingCtrl.create({
       content: 'Please wait...'
@@ -100,7 +83,7 @@ export class HomePage {
   }
 
 
-  onCountoEnd(){
+  onCountoEnd() {
     console.log('ended')
   }
 }

@@ -64,7 +64,11 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "variables": {
+                "SENDER_ID": "542964623027"
+            },
+            "locator": "phonegap-plugin-push"
         },
         "platforms": [
             "android"
