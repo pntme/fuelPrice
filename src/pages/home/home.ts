@@ -100,7 +100,7 @@ export class HomePage {
   }
 
 
-  onCountoEnd(){
+  onCountoEnd() {
     console.log('ended')
   }
 }

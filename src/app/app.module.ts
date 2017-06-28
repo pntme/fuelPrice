@@ -12,6 +12,18 @@ import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 const cloudSettings: CloudSettings = {
   'core': {
     'app_id': 'f61637f1'
+  },
+  'push': {
+    'sender_id': 'SENDER_ID',
+    'pluginConfig': {
+      'ios': {
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
   }
 };
 
